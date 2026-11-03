@@ -3,6 +3,15 @@
     <channel>
         <title>Linger</title>
         <item>
+            <title>0.9.2</title>
+            <pubDate>Tue, 03 Nov 2026 02:10:31 -0500</pubDate>
+            <link>https://leizikang.github.io/linger/</link>
+            <sparkle:version>47</sparkle:version>
+            <sparkle:shortVersionString>0.9.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/LeiZiKang/linger/releases/download/v0.9.2/Linger-0.9.2.dmg" length="3576390" type="application/octet-stream" sparkle:edSignature="/lkA9rqqf+Xr2jqXJ3qGYGg71qJGnl5TiOU0S9gge8Re3K5S74ADa7ZR1ZJB9BqZm1FiU+rUtmN8HqnpjfTyAA=="/>
+        </item>
+        <item>
             <title>0.9.1</title>
             <pubDate>Tue, 03 Nov 2026 01:09:04 -0500</pubDate>
             <link>https://leizikang.github.io/linger/</link>
