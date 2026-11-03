@@ -1,0 +1,40 @@
+# Linger (余音)
+
+> Linger is a free macOS app that shows synced lyrics on the desktop for the song that is playing in NetEase Cloud Music, Spotify, or Apple Music. It needs macOS 14 or later, on Apple silicon or Intel.
+
+Linger is an independent tool. It is not affiliated with Apple, Spotify, or NetEase Cloud Music. It is not on the Mac App Store, because reading the playback state of NetEase Cloud Music needs capabilities that the App Store does not allow.
+
+## Features
+
+- Synced desktop lyrics. Word-by-word highlighting and translations when the lyrics source supplies them.
+- Background colors from the album artwork. HDR highlights on XDR displays.
+- Move and resize the lyrics card. Keep it at desktop level or always on top. Lock it for click-through.
+- A timing offset that Linger remembers for each song.
+- Manual lyrics search and replacement, from LRCLIB and NetEase Cloud Music.
+- A local lyrics cache that also works offline for songs you have played.
+- Launch at login and automatic updates.
+
+## Players
+
+- NetEase Cloud Music: no additional permissions needed.
+- Spotify and Apple Music: optional authorization gives more precise playback progress.
+
+## Privacy
+
+No account and no analytics. To find lyrics, Linger sends the current song title, artist, album, and duration to the third-party lyrics sources LRCLIB and NetEase Cloud Music. Lyrics come from those sources, so some can be missing or inaccurate.
+
+## Price
+
+Free.
+
+## Links
+
+- [Website](https://linger-lyrics.pages.dev/): product page in English and Chinese, with an interactive demo
+- [Download (DMG)](https://github.com/LeiZiKang/linger/releases/latest/download/Linger.dmg): latest version
+- [Release notes](https://github.com/LeiZiKang/linger/releases)
+- [Report an issue](https://github.com/LeiZiKang/linger/issues)
+- [README](https://linger-lyrics.pages.dev/README.md): install steps and privacy details, in English and Chinese
+
+## Install and uninstall
+
+Open the DMG and drag Linger into Applications, then open the app. Launch at login needs the app in Applications. To uninstall, quit Linger and drag the app to the Trash.

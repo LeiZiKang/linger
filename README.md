@@ -3,7 +3,7 @@
 余音是一款 macOS 桌面歌词工具，让歌词随音乐显示在桌面上。  
 Linger shows lyrics alongside your music on your Mac desktop.
 
-[官网 / Website](https://leizikang.github.io/linger/) · [下载 / Download](https://github.com/LeiZiKang/linger/releases/latest/download/Linger.dmg) · [问题反馈 / Report an issue](https://github.com/LeiZiKang/linger/issues)
+[官网 / Website](https://linger-lyrics.pages.dev/) · [下载 / Download](https://github.com/LeiZiKang/linger/releases/latest/download/Linger.dmg) · [问题反馈 / Report an issue](https://github.com/LeiZiKang/linger/issues)
 
 ## 系统与播放器 / Requirements and players
 
