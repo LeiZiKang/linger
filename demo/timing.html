@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; media-src 'self' blob:; connect-src 'none'; script-src 'self'; style-src 'self'">
+<title>余音 · 本地歌词打轴 / Local lyric timing</title>
+<link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="./timing.css"><script src="./timing.js" defer></script>
+</head>
+<body><main class="timing-page">
+<h1>留住每一个字 <small>Local lyric timing</small></h1>
+<p>音频只在当前浏览器读取，不会上传。 / Audio stays in this browser. Nothing is uploaded.</p>
+<ol>
+<li>选择有权使用的音频，填写曲名与节拍，粘贴歌词，每行一句，可写「原文 | 翻译」。<br>Choose your licensed audio, enter its title and BPM, and paste one line at a time: original | translation.</li>
+<li>点「载入歌词」，再播放。在下方打轴区按空格记录当前字的起点：中文按字，英文按词。<br>Load lyrics and play. In the timing area, tap Space at each character or English word’s start.</li>
+<li>Enter 结束当前句并跳到下一句；最后一字也要按空格，再按 Enter 记录句尾。打错可以回退或清空重来。<br>After tapping the last word, press Enter at the line’s end. Undo mistakes or reset and start again.</li>
+<li>完成全部句子后导出 JSON，检查时间，再将对象加入 tracks.json 数组。<br>Finish every line, export JSON, review the times, then add the object to tracks.json.</li>
+</ol>
+<div class="timing-fields">
+<label>本地音频 / Local audio<input id="file" type="file" accept="audio/*"></label>
+<label>曲名 / Title<input id="title" value="My original demo"></label>
+<label>作者 / Artist<input id="artist" value="Original demo"></label>
+<label>BPM<input id="bpm" type="number" min="30" max="240" value="64"></label>
+</div>
+<label>歌词 / Lyrics<textarea id="lyrics" rows="8" placeholder="We carry a little light | 我们携着一点微光"></textarea></label>
+<div class="timing-actions"><button id="load" class="pill">载入歌词 / Load lyrics</button><button id="reset" class="pill">清空打点 / Reset timing</button></div>
+<audio id="audio" controls preload="metadata"></audio>
+<label class="speed"><input id="slow" type="checkbox"> 0.5 倍速 / Half speed</label>
+<progress id="progress" max="1" value="0" aria-label="音频进度 / Audio progress"></progress><output id="position">0:00 / 0:00</output>
+<div id="tap-area" tabindex="0" role="group" aria-label="打轴区，空格记录当前字，Enter 下一句 / Timing area: Space marks a word, Enter ends a line">
+<p id="line-count"></p><div id="tokens">先载入歌词 / Load lyrics first</div><p id="tap-translation"></p>
+<button id="tap" class="pill">打点（空格）/ Mark (Space)</button><button id="next-line" class="pill">下一句（Enter）/ Next line</button>
+</div>
+<div class="timing-actions"><button id="undo" class="pill">回退一步 / Undo</button><button id="export" class="pill">导出 JSON / Export JSON</button><button id="copy" class="pill">复制 JSON / Copy JSON</button></div>
+<p id="status" role="status" aria-live="polite"></p>
+<label>结果 / Result<textarea id="result" rows="12" readonly></textarea></label>
+</main></body></html>

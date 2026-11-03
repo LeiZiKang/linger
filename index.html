@@ -14,6 +14,7 @@
   <link rel="icon" type="image/png" href="./assets/favicon.png">
   <link rel="stylesheet" href="./style.css">
   <script src="./main.js" defer></script>
+  <script src="./demo/demo.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#features" data-i18n="skip"></a>
@@ -23,9 +24,24 @@
   </header>
   <main>
     <section id="home" class="hero" aria-labelledby="hero-title">
-      <canvas id="aurora" aria-hidden="true"></canvas><div class="hero-shade"></div>
+
       <div class="hero-copy"><p class="eyebrow" data-i18n="eyebrow"></p><h1 id="hero-title"><span data-i18n="name"></span><small data-i18n="tagline"></small></h1></div>
-      <div id="hero-card" class="lyric-card hero-card" aria-hidden="true"></div>
+      <div id="interactive-demo" tabindex="0" role="group" data-i18n-aria="demoLabel">
+        <div class="mac-menu"><span>● &nbsp; Linger</span><span>♪ &nbsp; <time id="mac-time">21:08</time></span></div>
+        <canvas id="aurora" aria-hidden="true"></canvas>
+        <div id="demo-player" tabindex="0" role="group" data-i18n-aria="playerLabel">
+          <div class="player-heading"><span class="demo-cover" aria-hidden="true"></span><div><strong id="demo-title">A Little Light</strong><small data-i18n="originalDemo"></small></div></div>
+          <div class="transport"><button id="demo-prev" data-i18n-aria="previous">‹</button><button id="demo-play" data-i18n-aria="play">▶</button><button id="demo-next" data-i18n-aria="next">›</button><output id="demo-time">0:00 / 1:00</output></div>
+          <input id="demo-progress" type="range" min="0" max="60" value="0" step="0.01" data-i18n-aria="seek">
+        </div>
+        <div id="demo-card" class="lyric-card" tabindex="0" role="group" data-i18n-aria="moveLabel">
+          <div class="demo-toolbar"><button id="demo-lock" aria-pressed="false"></button><button id="demo-layer" aria-pressed="true"></button></div>
+          <div class="demo-card-content"><div class="demo-card-title"></div><p class="demo-previous"></p><div class="demo-current"></div><p class="demo-translation"></p><p class="demo-following"></p></div>
+          <button id="demo-resize" data-i18n-aria="resize">⌟</button>
+        </div>
+        <div id="demo-gate"><button id="demo-start" disabled data-i18n="startDemo"></button><p id="demo-message" role="status" data-i18n="demoLoading"></p></div>
+      </div>
+      <p class="simulation-note" data-i18n="simulationNote"></p>
       <div class="download-wrap"><a class="download" href="https://github.com/LeiZiKang/linger/releases/latest/download/Linger.dmg"><span class="download-desktop" data-i18n="download"></span><span class="download-mobile" data-i18n="mobile"></span><span aria-hidden="true">↗</span></a><p class="requirements" data-i18n="requirements"></p></div>
       <a class="discover" href="#features"><span data-i18n="discover"></span><span aria-hidden="true">↓</span></a>
     </section>

@@ -1,0 +1,13 @@
+Bundled demo: no audio recordings, sampled music, or cover images are distributed.
+A Little Light / 余音: original demonstration lyrics and procedural accompaniment
+created for this site. Artwork consists solely of generated CSS gradients.
+
+Before adding an audio file, record for EACH asset:
+File name:
+Title and creator:
+Source URL / generation service and plan:
+Lyrics and translation author / permission:
+Commercial-use AND public-distribution license URL:
+Date permission was obtained:
+Private location of license evidence (do not upload personal or payment data):
+Any required public attribution:

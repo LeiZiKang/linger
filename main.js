@@ -1,9 +1,10 @@
 'use strict';
 const COPY = {
   zh: {
+    demoLabel:"可操作的余音演示，空格播放或暂停",playerLabel:"演示播放器，方向键移动",originalDemo:"演示曲目",previous:"上一首",next:"下一首",seek:"播放进度",resize:"缩放歌词卡片，方向键调整",startDemo:"▶ 播放，感受一下 / Play to feel it",demoLoading:"正在准备一点微光…",demoReady:"原创合成配乐 · 点击后开启声音",demoError:"暂时无法播放，请再试一次。",simulationNote:"这是网页演示，App 里的效果更细腻。 / A web demo. Finer in the app.",
     pageTitle:'余音 Linger · 让歌词，在桌面上多停留一会儿。', description:'免费的 macOS 桌面歌词工具。封面流光、逐字跟唱，让歌词在桌面上多停留一会儿。支持 macOS 14 及以上。',
     brand:'Linger', skip:'跳到功能介绍', language:'English', languageLabel:'Switch to English', nav:'语言选择', features:'功能介绍', name:'余音', tagline:'让歌词，在桌面上多停留一会儿。', eyebrow:'为桌面留一束光 · macOS', download:'免费下载 · macOS 14+', mobile:'请在 Mac 上下载', requirements:'需要 macOS 14 或更高版本，Apple 芯片和 Intel 均可', discover:'往下，慢慢听',
-    demoTrack:'A Little Light · Mira / Noah', line0:'The evening settles on the street', line1:'We carry a little light', line2:'And let it lead us home', translation0:'夜色落在窗边', translation1:'我们携着一点微光', translation2:'让它带我们回家',
+    demoTrack:'A Little Light · Linger', line0:'The evening settles on the street', line1:'We carry a little light', line2:'And let it lead us home', translation0:'夜色落在窗边', translation1:'我们携着一点微光', translation2:'让它带我们回家',
     colorLabel:'颜色', colorTitle:'封面决定颜色。', colorBody:'让封面的色彩缓缓流动。每一首歌，都有自己的光。', paletteLabel:'选择演示封面色板', amber:'暮色品红', blue:'深海青蓝', rose:'余烬橙金', paletteHint:'点一张色板，换一种心情',
     wordLabel:'节奏', wordTitle:'逐字跟唱。', wordBody:'有逐字时间轴的歌词，跟着声音一字字亮起。翻译也在，一起读懂。', replay:'↻ 再听一遍',
     pauseLabel:'留白', pauseTitle:'暂停时，悄悄散去。', pauseBody:'音乐停下，歌词从边缘轻轻消散。再按播放，微光重新凝聚。', pause:'Ⅱ 暂停', play:'▷ 播放', playing:'正在播放 · 试试暂停', paused:'已暂停 · 留一点安静', dissolveLabel:'暂停时从边缘向中心溶解的歌词卡片',
@@ -14,9 +15,10 @@ const COPY = {
     closing:'让下一首歌，有个落脚的地方。', copyright:'© 2026 Linger', releases:'版本发布', feedback:'问题反馈', legal:'Linger 是独立开发的工具，与 Apple、Spotify、网易云音乐没有关联，相关商标归各自所有者所有。'
   },
   en: {
+    demoLabel:"Interactive Linger demo. Space to play or pause.",playerLabel:"Demo player. Arrow keys to move.",originalDemo:"Demo track",previous:"Previous track",next:"Next track",seek:"Playback position",resize:"Resize lyrics card with arrow keys",startDemo:"▶ 播放，感受一下 / Play to feel it",demoLoading:"Gathering a little light…",demoReady:"Original synthesized music · click to turn on sound",demoError:"Unable to play just now. Please try again.",simulationNote:"A web demo. Finer in the app. / 这是网页演示，App 里的效果更细腻。",
     pageTitle:'Linger — Let the lyrics stay a little longer.', description:'A free desktop lyrics companion for macOS. Album-inspired color and word-by-word lyrics. Let the lyrics stay a little longer. Requires macOS 14+.',
     brand:'Linger', skip:'Skip to features', language:'中文', languageLabel:'切换到中文', nav:'Language selection', features:'Features', name:'Linger', tagline:'Let the lyrics stay a little longer.', eyebrow:'A little light for your desktop · macOS', download:'Free download · macOS 14+', mobile:'Please download on a Mac', requirements:'Requires macOS 14 or later. For Apple silicon and Intel.', discover:'Stay a moment. Scroll a little.',
-    demoTrack:'A Little Light · Mira / Noah', line0:'The evening settles on the street', line1:'We carry a little light', line2:'And let it lead us home', translation0:'夜色落在窗边', translation1:'我们携着一点微光', translation2:'让它带我们回家',
+    demoTrack:'A Little Light · Linger', line0:'The evening settles on the street', line1:'We carry a little light', line2:'And let it lead us home', translation0:'夜色落在窗边', translation1:'我们携着一点微光', translation2:'让它带我们回家',
     colorLabel:'Color', colorTitle:'Every cover casts a light.', colorBody:'Colors from the artwork flow gently behind the words. A different glow for every song.', paletteLabel:'Choose a demo artwork palette', amber:'Dusk magenta', blue:'Deep sea blue', rose:'Ember gold', paletteHint:'Pick a palette. Change the mood.',
     wordLabel:'Rhythm', wordTitle:'Follow every word.', wordBody:'Lyrics with word-level timing light up in step with the voice. With translations, meaning follows along.', replay:'↻ Play it again',
     pauseLabel:'Stillness', pauseTitle:'Pause. Let it drift away.', pauseBody:'When the music stops, the lyrics dissolve gently from the edges. Press play, and the light gathers again.', pause:'Ⅱ Pause', play:'▷ Play', playing:'Playing · try pausing', paused:'Paused · a moment of quiet', dissolveLabel:'A lyrics card that dissolves from its edges toward the center when paused',
@@ -32,7 +34,7 @@ try { const saved = localStorage.getItem('linger-language'); if (saved === 'en' 
 const $ = (s) => document.querySelector(s);
 const motion = matchMedia('(prefers-reduced-motion: reduce)');
 let reduced = motion.matches;
-let paused = false, heroIndex = -1, heroClock = 0, wordClock = 0;
+let paused = false, heroClock = 0, wordClock = 0;
 const t = (key) => COPY[language][key];
 function list(selector, values) { const el = $(selector); el.replaceChildren(...values.map(value => { const li = document.createElement('li'); li.textContent = value; return li; })); }
 function setLanguage() {
@@ -50,24 +52,9 @@ function setLanguage() {
   $('#word-line').replaceChildren(...t('line1').split(' ').map(word => { const span = document.createElement('span'); span.textContent = word; return span; }));
   $('#card-size').setAttribute('aria-label', t('size'));
   $('#layer-toggle').textContent = t(onTop ? 'top' : 'desktop'); $('#lock-toggle').textContent = t(locked ? 'locked' : 'unlocked');
-  heroIndex = -1; renderHero(Math.floor(heroClock / 6) % 3); updatePause(); drawDissolve(); renderWords();
+  updatePause(); drawDissolve(); renderWords(); document.dispatchEvent(new Event("linger-language"));
 }
 $('#language').addEventListener('click', () => { language = language === 'zh' ? 'en' : 'zh'; try { localStorage.setItem('linger-language', language); } catch (_) { /* No persistent storage needed. */ } setLanguage(); });
-function renderHero(index) {
-  if (index === heroIndex) return;
-  heroIndex = index;
-  const card = $('#hero-card');
-  if (!card.firstChild) card.innerHTML = '<div class="track-header"><span class="cover"></span><span class="track-name"></span><span class="bars"><i></i><i></i><i></i></span></div><div class="lyric-window"><div class="lyric-stack"></div></div>';
-  card.querySelector('.track-name').textContent = t('demoTrack');
-  const stack = card.querySelector('.lyric-stack');
-  // Reuse rows so the outgoing line can spring upward rather than resetting the card.
-  if (stack.children.length === 0) for (let i = 0; i < 5; i++) { const row = document.createElement('div'); row.className = 'lyric-row'; row.innerHTML = '<div class="sing-line"><span class="base"></span><span class="lit"></span></div><div class="translation"></div>'; stack.append(row); }
-  stack.style.transition = 'none'; stack.style.transform = 'translateY(0)';
-  [...stack.children].forEach((row, i) => { const n = (index + i + 1) % 3; row.classList.toggle('current', i === 2); row.querySelector('.base').textContent = t(`line${n}`); row.querySelector('.lit').textContent = t(`line${n}`); row.querySelector('.translation').textContent = i === 2 ? t(`translation${n}`) : ''; });
-  // The preceding and current rows land in the same positions after each change.
-  void stack.offsetHeight;
-  stack.style.transition = reduced ? 'none' : ''; stack.style.transform = 'translateY(-51px)';
-}
 function renderWords() {
   const progress = (wordClock % 6) / 5;
   $('#word-line').querySelectorAll('span').forEach((span, i, all) => span.classList.toggle('active', reduced || progress >= i / all.length));
@@ -107,6 +94,7 @@ function initGL() {
 function drawAurora(time) {
   if (!gl || gl.isContextLost()) return;
   const rect=aurora.getBoundingClientRect(), dpr=Math.min(devicePixelRatio||1,1.25);
+  if (!rect.width || !rect.height) return;
   const w=Math.max(1,Math.round(rect.width*dpr)),h=Math.max(1,Math.round(rect.height*dpr));
   if(aurora.width!==w||aurora.height!==h){aurora.width=w;aurora.height=h;gl.viewport(0,0,w,h);}
   gl.uniform1f(uniforms.time,reduced?0:time*.4);gl.uniform2f(uniforms.size,w,h);
@@ -146,13 +134,13 @@ movable.addEventListener('pointermove',event=>{if(!drag)return;if(drag.resize){c
 movable.addEventListener('keydown',event=>{if(locked||!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key))return;event.preventDefault();if(event.shiftKey){cardScale=Math.max(.75,Math.min(1.15,cardScale+(['ArrowUp','ArrowRight'].includes(event.key)?.025:-.025)));}else{cardX+=(event.key==='ArrowLeft'?-8:event.key==='ArrowRight'?8:0);cardY+=(event.key==='ArrowUp'?-8:event.key==='ArrowDown'?8:0);}placeCard();});
 const visible=new Set();
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)visible.add(entry.target.id);else visible.delete(entry.target.id);});schedule();},{threshold:0});
-['home','color-demo','word-demo','dissolve-demo'].forEach(id=>observer.observe(document.getElementById(id)));
+['interactive-demo','color-demo','word-demo','dissolve-demo'].forEach(id=>observer.observe(document.getElementById(id)));
 let frame=0,last=0,activeTime=0;
 function schedule(){if(!document.hidden&&visible.size&&!frame)frame=requestAnimationFrame(tick);}
 function tick(now){frame=0;if(document.hidden||!visible.size){last=0;return;}if(now-last<1000/30){schedule();return;}const dt=last?Math.min((now-last)/1000,.1):0;last=now;activeTime+=dt;
   const changing=paletteCurrent.some((c,i)=>c.some((v,j)=>Math.abs(v-paletteTarget[i][j])>.001));
-  if(changing&&(visible.has('color-demo')||visible.has('home')))paintPalette(reduced?1:.07);
-  if(visible.has('home')){if(!reduced)heroClock+=dt;renderHero(Math.floor(heroClock/6)%3);const current=$('.lyric-row.current .sing-line');if(current){const p=reduced?1:Math.min(1,(heroClock%6)/4.9);current.style.setProperty('--progress',`${(1-Math.pow(1-p,1.2))*110}%`);current.style.setProperty('--lift',`${reduced?0:-Math.sin(p*Math.PI)*1.8}px`);}if(!reduced||changing)drawAurora(activeTime);}
+  if(changing&&(visible.has('color-demo')||visible.has('interactive-demo')))paintPalette(reduced?1:.07);
+  if(visible.has('interactive-demo')&&(!reduced||changing))drawAurora(activeTime);
   if(visible.has('word-demo')&&!reduced){wordClock+=dt;renderWords();}
   if(visible.has('dissolve-demo')){const target=paused?1:0;const difference=target-dissolveAmount;if(Math.abs(difference)>.001){dissolveAmount+=Math.sign(difference)*Math.min(Math.abs(difference),dt/(reduced?.45:1.3));drawDissolve();}}
   // Reduced-motion pages only need frames while a user-triggered fade is in progress.

@@ -195,3 +195,44 @@ footer{padding-top:24px!important}
 .download:hover{transform:none}
 }
 
+/* Interactive desktop — isolated from the four smaller feature demonstrations. */
+.hero{height:auto;min-height:0;max-height:none!important;padding:100px 24px 65px;background:var(--bg);overflow:visible}
+.hero-copy{margin:0 0 24px}.hero h1{font-size:clamp(42px,4vw,56px)}.hero h1 small{font-size:clamp(18px,2vw,25px);margin-top:12px}
+.hero .discover{position:static;margin-top:25px}.hero .download-wrap{margin-top:10px}
+#interactive-demo{position:relative;width:min(1100px,100%,calc(max(480px,100svh - 360px)*1.6));aspect-ratio:16/10;border:1px solid #ffffff30;border-radius:20px;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 25% 60%,var(--track-b,#c4307c),transparent 80%),var(--track-a,#3b2a94);box-shadow:0 30px 100px #0005}
+#interactive-demo #aurora{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.mac-menu{position:absolute;inset:0 0 auto;z-index:5;height:30px;background:#13132670;backdrop-filter:blur(14px);display:flex;justify-content:space-between;align-items:center;padding:0 18px;font-size:11px;color:#eee9f7}
+#demo-player{position:absolute;left:9%;top:27%;width:300px;height:146px;z-index:2;border:1px solid #ffffff30;border-radius:15px;background:#181629ed;box-shadow:0 15px 40px #0005;padding:14px 16px;cursor:grab;touch-action:none;user-select:none}
+.player-heading{display:flex;align-items:center;gap:12px}.player-heading strong{display:block;font-size:13px;font-weight:500}.player-heading small{display:block;font-size:10px;color:var(--muted)}
+.demo-cover{width:42px;height:42px;border-radius:10px;background:conic-gradient(from 35deg,var(--track-a),var(--track-b),var(--track-c),var(--track-a));box-shadow:inset 0 0 15px #ffffff30}
+.transport{display:flex;gap:6px;align-items:center;margin-top:6px}.transport button{background:none;border-radius:7px;width:32px;height:32px;font-size:19px}.transport button:hover{background:#ffffff12}.transport output{margin-left:auto;color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums}
+#demo-progress{display:block;width:100%;height:16px;margin:2px 0 0;accent-color:#eee2ed;cursor:pointer}
+#demo-card{position:absolute;left:40%;top:40%;width:48%;height:242px;padding:24px 28px;z-index:3;cursor:grab;touch-action:none;user-select:none;--lyric-size:25px;will-change:opacity}
+.demo-card-content{height:100%;overflow:hidden;transition:opacity .3s}.demo-card-title{font-size:10px;color:#e9e2ef;margin-bottom:12px}.demo-previous,.demo-following{font-size:calc(var(--lyric-size)*.76);line-height:1.4;opacity:.4;filter:blur(.4px);margin:10px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.demo-current{font-size:var(--lyric-size);line-height:1.55;font-weight:500;white-space:pre-wrap;overflow-wrap:break-word;letter-spacing:-.03em}
+.demo-current span{display:inline-block;white-space:pre;background:linear-gradient(90deg,#fff 0 var(--word,0%),#c3b6cc var(--word,0%) 100%);background-clip:text;-webkit-background-clip:text;color:transparent;transform:translateY(var(--word-lift,0px))}
+.demo-translation{font-size:12px;color:#eee2ed;margin:4px 0 8px}.demo-toolbar{position:absolute;right:9px;top:-1px;display:flex;gap:4px;opacity:0;transition:opacity .2s;z-index:4;padding:5px;background:#211b35;border-radius:10px;pointer-events:auto}
+.demo-toolbar button{font-size:10px;border-radius:7px;padding:5px 9px;background:#ffffff0c}
+#demo-card:hover .demo-toolbar,#demo-card:focus-within .demo-toolbar,.card-locked .demo-toolbar{opacity:1}
+#demo-card .demo-card-content{transition:opacity .25s ease}#interactive-demo:not(.card-desktop) #demo-card.is-faded .demo-card-content{opacity:.35}
+#demo-resize{position:absolute;bottom:2px;right:3px;width:29px;height:29px;background:none;cursor:nwse-resize;color:#d9c9df}
+#demo-card.compact{padding-top:16px;padding-bottom:14px}#demo-card.compact .demo-card-title,#demo-card.compact .demo-previous,#demo-card.compact .demo-following{display:none}
+.card-locked #demo-card{pointer-events:none}.card-locked #demo-resize{visibility:hidden}.card-locked #demo-card .demo-toolbar{pointer-events:auto}
+.card-desktop #demo-card{z-index:1}#demo-card.dissolved{pointer-events:none}#demo-card.dissolved .demo-toolbar{opacity:0;pointer-events:none}
+#demo-gate{position:absolute;inset:30px 0 0;z-index:6;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0c0b2266;backdrop-filter:blur(8px);transition:opacity .7s,visibility .7s}
+#demo-start{background:#f8f0f5;color:#261c32;padding:17px 24px;border-radius:40px;font-size:15px;box-shadow:0 8px 40px #0003}#demo-start:disabled{opacity:.5;cursor:wait}
+#demo-message{font-size:11px;color:#eee2ed}.has-started #demo-gate{opacity:0;visibility:hidden;pointer-events:none}
+.simulation-note{font-size:10px;color:var(--muted);text-align:center;margin:17px 0 22px}
+@media(max-width:819px){
+.hero{padding:115px 18px 45px;height:auto;min-height:0}.hero-copy{margin:0 0 30px}.hero h1{font-size:54px}.hero h1 small{font-size:18px}.hero .eyebrow{font-size:9px}
+#interactive-demo{aspect-ratio:auto;height:390px;max-width:540px;background:transparent;border:0;box-shadow:none;overflow:visible}
+#interactive-demo #aurora,.mac-menu,.demo-cover,.player-heading,#demo-prev,#demo-next,.demo-toolbar,#demo-resize{display:none!important}
+#demo-card{left:0!important;top:0!important;width:100%!important;height:275px!important;padding:24px!important;--lyric-size:23px!important;cursor:default;pointer-events:none!important}
+#demo-card .demo-card-title,#demo-card .demo-previous,#demo-card .demo-following{display:block!important}
+#demo-card .demo-card-content{opacity:1!important}
+#demo-player{left:0!important;top:290px!important;width:100%!important;height:90px!important;background:transparent;border:0;padding:0 18px;box-shadow:none;cursor:default}
+.transport{margin:0}.transport button{width:40px;height:40px}.transport output{font-size:12px}#demo-progress{margin-top:8px}
+#demo-gate{inset:0;border-radius:20px}#demo-start{font-size:13px;padding:16px 20px}
+.simulation-note{max-width:340px;line-height:1.8}.hero .download-mobile{display:inline}.hero .download-desktop{display:none}.hero .requirements{font-size:10px}.hero .discover{margin-top:25px}
+}
+@media(prefers-reduced-motion:reduce){.demo-current span{transform:none}#demo-card{will-change:auto}}
