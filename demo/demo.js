@@ -135,7 +135,9 @@
     updateControls(); wake();
   }
   function updateControls() {
-    q('#demo-play').textContent = clock.playing ? 'Ⅱ' : '▶';
+    q('#demo-play').innerHTML = clock.playing
+      ? '<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.8" width="3.2" height="10.4" rx="1"/><rect x="9.3" y="2.8" width="3.2" height="10.4" rx="1"/></svg>'
+      : '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 2.8v10.4L13.4 8z"/></svg>';
     q('#demo-play').setAttribute('aria-label', t(clock.playing ? 'pause' : 'play'));
     q('#demo-lock').textContent = t(locked ? 'locked' : 'unlocked');
     q('#demo-layer').textContent = t(top ? 'top' : 'desktop');

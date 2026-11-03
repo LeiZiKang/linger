@@ -3,7 +3,7 @@ const COPY = {
   zh: {
     demoLabel:"可操作的余音演示，空格播放或暂停",playerLabel:"演示播放器，方向键移动",originalDemo:"演示曲目",previous:"上一首",next:"下一首",seek:"播放进度",resize:"缩放歌词卡片，方向键调整",startDemo:"▶ 播放，感受一下 / Play to feel it",demoLoading:"正在准备一点微光…",demoReady:"原创合成配乐 · 点击后开启声音",demoError:"暂时无法播放，请再试一次。",simulationNote:"这是网页演示，App 里的效果更细腻。 / A web demo. Finer in the app.",
     pageTitle:'余音 Linger · 让歌词，在桌面上多停留一会儿。', description:'免费的 macOS 桌面歌词工具。封面流光、逐字跟唱，让歌词在桌面上多停留一会儿。支持 macOS 14 及以上。',
-    brand:'Linger', skip:'跳到功能介绍', language:'English', languageLabel:'Switch to English', nav:'语言选择', features:'功能介绍', name:'余音', tagline:'让歌词，在桌面上多停留一会儿。', eyebrow:'为桌面留一束光 · macOS', download:'免费下载 · macOS 14+', mobile:'请在 Mac 上下载', requirements:'需要 macOS 14 或更高版本，Apple 芯片和 Intel 均可', discover:'往下，慢慢听',
+    brand:'Linger', skip:'跳到功能介绍', nav:'语言选择', features:'功能介绍', name:'余音', tagline:'让歌词，在桌面上多停留一会儿。', eyebrow:'为桌面留一束光 · macOS', download:'免费下载 · macOS 14+', mobile:'请在 Mac 上下载', requirements:'需要 macOS 14 或更高版本，Apple 芯片和 Intel 均可', discover:'往下，慢慢听',
     demoTrack:'A Little Light · Linger', line0:'The evening settles on the street', line1:'We carry a little light', line2:'And let it lead us home', translation0:'夜色落在窗边', translation1:'我们携着一点微光', translation2:'让它带我们回家',
     colorLabel:'颜色', colorTitle:'封面决定颜色。', colorBody:'让封面的色彩缓缓流动。每一首歌，都有自己的光。', paletteLabel:'选择演示封面色板', amber:'暮色品红', blue:'深海青蓝', rose:'余烬橙金', paletteHint:'点一张色板，换一种心情',
     wordLabel:'节奏', wordTitle:'逐字跟唱。', wordBody:'有逐字时间轴的歌词，跟着声音一字字亮起。翻译也在，一起读懂。', replay:'↻ 再听一遍',
@@ -17,7 +17,7 @@ const COPY = {
   en: {
     demoLabel:"Interactive Linger demo. Space to play or pause.",playerLabel:"Demo player. Arrow keys to move.",originalDemo:"Demo track",previous:"Previous track",next:"Next track",seek:"Playback position",resize:"Resize lyrics card with arrow keys",startDemo:"▶ 播放，感受一下 / Play to feel it",demoLoading:"Gathering a little light…",demoReady:"Original synthesized music · click to turn on sound",demoError:"Unable to play just now. Please try again.",simulationNote:"A web demo. Finer in the app. / 这是网页演示，App 里的效果更细腻。",
     pageTitle:'Linger — Let the lyrics stay a little longer.', description:'A free desktop lyrics companion for macOS. Album-inspired color and word-by-word lyrics. Let the lyrics stay a little longer. Requires macOS 14+.',
-    brand:'Linger', skip:'Skip to features', language:'中文', languageLabel:'切换到中文', nav:'Language selection', features:'Features', name:'Linger', tagline:'Let the lyrics stay a little longer.', eyebrow:'A little light for your desktop · macOS', download:'Free download · macOS 14+', mobile:'Please download on a Mac', requirements:'Requires macOS 14 or later. For Apple silicon and Intel.', discover:'Stay a moment. Scroll a little.',
+    brand:'Linger', skip:'Skip to features', nav:'Language selection', features:'Features', name:'Linger', tagline:'Let the lyrics stay a little longer.', eyebrow:'A little light for your desktop · macOS', download:'Free download · macOS 14+', mobile:'Please download on a Mac', requirements:'Requires macOS 14 or later. For Apple silicon and Intel.', discover:'Stay a moment. Scroll a little.',
     demoTrack:'A Little Light · Linger', line0:'The evening settles on the street', line1:'We carry a little light', line2:'And let it lead us home', translation0:'夜色落在窗边', translation1:'我们携着一点微光', translation2:'让它带我们回家',
     colorLabel:'Color', colorTitle:'Every cover casts a light.', colorBody:'Colors from the artwork flow gently behind the words. A different glow for every song.', paletteLabel:'Choose a demo artwork palette', amber:'Dusk magenta', blue:'Deep sea blue', rose:'Ember gold', paletteHint:'Pick a palette. Change the mood.',
     wordLabel:'Rhythm', wordTitle:'Follow every word.', wordBody:'Lyrics with word-level timing light up in step with the voice. With translations, meaning follows along.', replay:'↻ Play it again',
@@ -45,7 +45,7 @@ function setLanguage() {
   document.querySelector('meta[property="og:description"]').content = t('description');
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
   document.querySelectorAll('[data-i18n-aria]').forEach(el => { el.setAttribute('aria-label', t(el.dataset.i18nAria)); });
-  $('#language').textContent = t('language'); $('#language').setAttribute('aria-label', t('languageLabel'));
+  $('#language').setAttribute('aria-checked', String(language === 'zh'));
   $('nav').setAttribute('aria-label', t('nav')); $('#features').setAttribute('aria-label', t('features'));
   list('#detail-list', t('details')); list('#player-list', t('players'));
   $('#faq-list').replaceChildren(...t('questions').map((question, i) => { const details = document.createElement('details'); const summary = document.createElement('summary'); summary.textContent = question; const p = document.createElement('p'); p.textContent = t('answers')[i]; details.append(summary, p); return details; }));

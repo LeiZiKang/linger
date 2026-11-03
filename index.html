@@ -20,7 +20,7 @@
   <a class="skip" href="#features" data-i18n="skip"></a>
   <header class="site-header">
     <a class="brand" href="#home"><img src="./assets/app-icon.png" alt="" width="32" height="32"><span data-i18n="brand">Linger</span></a>
-    <nav aria-label="Language"><button id="language" type="button"></button></nav>
+    <nav aria-label="Language"><button id="language" type="button" role="switch" aria-checked="false" aria-label="中文"><span aria-hidden="true">EN</span><span aria-hidden="true">中</span></button></nav>
   </header>
   <main>
     <section id="home" class="hero" aria-labelledby="hero-title">
@@ -31,7 +31,7 @@
         <canvas id="aurora" aria-hidden="true"></canvas>
         <div id="demo-player" tabindex="0" role="group" data-i18n-aria="playerLabel">
           <div class="player-heading"><span class="demo-cover" aria-hidden="true"></span><div><strong id="demo-title">A Little Light</strong><small data-i18n="originalDemo"></small></div></div>
-          <div class="transport"><button id="demo-prev" data-i18n-aria="previous">‹</button><button id="demo-play" data-i18n-aria="play">▶</button><button id="demo-next" data-i18n-aria="next">›</button><output id="demo-time">0:00 / 1:00</output></div>
+          <div class="transport"><button id="demo-prev" data-i18n-aria="previous">‹</button><button id="demo-play" data-i18n-aria="play"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 2.8v10.4L13.4 8z"/></svg></button><button id="demo-next" data-i18n-aria="next">›</button><output id="demo-time">0:00 / 1:00</output></div>
           <input id="demo-progress" type="range" min="0" max="60" value="0" step="0.01" data-i18n-aria="seek">
         </div>
         <div id="demo-card" class="lyric-card" tabindex="0" role="group" data-i18n-aria="moveLabel">
