@@ -27,9 +27,9 @@ Open the DMG, drag Linger into Applications, then open the app. Launch at login 
 
 ## 隐私 / Privacy
 
-不需要账号，没有统计分析。查询歌词时，会把当前歌曲的歌名、歌手、专辑和时长发给第三方歌词源 LRCLIB 和网易云音乐，具体字段随查询接口而异。歌词会缓存在本机，可在设置中清除。
+不需要账号。“共享匿名使用统计”默认开启：检查更新时会附带一个随机 ID 及 App 和 macOS 版本号，用来统计活跃用户，不保存 IP 地址，可在设置 › 通用中关闭（关闭后会删除这个 ID）。查询歌词时，会把当前歌曲的歌名、歌手、专辑和时长发给第三方歌词源 LRCLIB 和网易云音乐，具体字段随查询接口而异。歌词会缓存在本机，可在设置中清除。
 
-No account is required, and there are no analytics. Lyrics lookups send the current song title, artist, album, and duration to third-party sources LRCLIB and NetEase Cloud Music; the exact fields vary by endpoint. Lyrics are cached locally and can be cleared in settings.
+No account is required. “Share anonymous usage stats” is on by default: update checks send a random ID plus the app and macOS version so we can count active users. IP addresses are not stored; turn it off in Settings › General (which also deletes the ID). Lyrics lookups send the current song title, artist, album, and duration to third-party sources LRCLIB and NetEase Cloud Music; the exact fields vary by endpoint. Lyrics are cached locally and can be cleared in settings.
 
 ## 关于此仓库 / About this repository
 

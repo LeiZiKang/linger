@@ -21,7 +21,7 @@ Linger is an independent tool. It is not affiliated with Apple, Spotify, or NetE
 
 ## Privacy
 
-No account and no analytics. To find lyrics, Linger sends the current song title, artist, album, and duration to the third-party lyrics sources LRCLIB and NetEase Cloud Music. Lyrics come from those sources, so some can be missing or inaccurate.
+No account. With “Share anonymous usage stats” on (the default), update checks send a random install ID plus the app and macOS version so active users can be counted; IP addresses are not stored, and it can be turned off in Settings > General. To find lyrics, Linger sends the current song title, artist, album, and duration to the third-party lyrics sources LRCLIB and NetEase Cloud Music. Lyrics come from those sources, so some can be missing or inaccurate.
 
 ## Price
 
