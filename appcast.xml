@@ -3,6 +3,15 @@
     <channel>
         <title>Linger</title>
         <item>
+            <title>0.9.5</title>
+            <pubDate>Mon, 16 Nov 2026 00:09:36 -0500</pubDate>
+            <link>https://linger-lyrics.pages.dev/</link>
+            <sparkle:version>75</sparkle:version>
+            <sparkle:shortVersionString>0.9.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/LeiZiKang/linger/releases/download/v0.9.5/Linger-0.9.5.dmg" length="3587912" type="application/octet-stream" sparkle:edSignature="6KJyoSo16kcODYLKk/BVv8kopLht69jb6t8uxFN7PPEvvOwDPQak7UwQl5Lciqx42mIR9dkDFVj4LXgAAxp9Ag=="/>
+        </item>
+        <item>
             <title>0.9.4</title>
             <pubDate>Wed, 04 Nov 2026 03:11:20 -0500</pubDate>
             <link>https://linger-lyrics.pages.dev/</link>
@@ -19,15 +28,6 @@
             <sparkle:shortVersionString>0.9.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/LeiZiKang/linger/releases/download/v0.9.3/Linger-0.9.3.dmg" length="3579359" type="application/octet-stream" sparkle:edSignature="LktFRl0NCuLNsf2M5eFkU4Bw6w463xoNsWgRBq2+CegsRCtiUaoJwfrX5PJxv7RiM954+KFgri2QUM7g6Gk2BQ=="/>
-        </item>
-        <item>
-            <title>0.9.2</title>
-            <pubDate>Tue, 03 Nov 2026 02:10:31 -0500</pubDate>
-            <link>https://linger-lyrics.pages.dev/</link>
-            <sparkle:version>47</sparkle:version>
-            <sparkle:shortVersionString>0.9.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/LeiZiKang/linger/releases/download/v0.9.2/Linger-0.9.2.dmg" length="3576390" type="application/octet-stream" sparkle:edSignature="/lkA9rqqf+Xr2jqXJ3qGYGg71qJGnl5TiOU0S9gge8Re3K5S74ADa7ZR1ZJB9BqZm1FiU+rUtmN8HqnpjfTyAA=="/>
         </item>
     </channel>
 </rss>
