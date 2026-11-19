@@ -10,6 +10,7 @@ Linger is an independent tool. It is not affiliated with Apple, Spotify, or NetE
 - Background colors from the album artwork. HDR highlights on XDR displays.
 - Move and resize the lyrics card. Keep it at desktop level or always on top. Lock it for click-through.
 - A timing offset that Linger remembers for each song.
+- A heart button in the menu bar panel that likes the song that is playing. For Apple Music, the song is also marked as a favorite in Music.
 - Manual lyrics search and replacement, from LRCLIB and NetEase Cloud Music.
 - A local lyrics cache that also works offline for songs you have played.
 - Launch at login and automatic updates.

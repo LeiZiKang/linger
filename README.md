@@ -16,6 +16,7 @@ Requires macOS 14 or later, on Apple silicon or Intel. Supports NetEase Cloud Mu
 - Album-inspired colors and HDR highlights on XDR displays.
 - Move and resize the widget, keep it at desktop level or on top, and lock it for click-through.
 - Per-track timing offsets, with manual lyrics search and selection.
+- Like the song that's playing with one click on the heart in the menu bar panel (also marked as a favorite in Apple Music).
 - Local lyrics cache, launch at login, and automatic updates.
 
 ## Installation
