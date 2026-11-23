@@ -17,6 +17,7 @@ Requires macOS 14 or later, on Apple silicon or Intel. Supports NetEase Cloud Mu
 - Move and resize the widget, keep it at desktop level or on top, and lock it for click-through.
 - Per-track timing offsets, with manual lyrics search and selection.
 - Like the song that's playing with one click on the heart in the menu bar panel (also marked as a favorite in Apple Music).
+- Optional Dock icon; clicking it opens Settings in its own window.
 - Local lyrics cache, launch at login, and automatic updates.
 
 ## Installation

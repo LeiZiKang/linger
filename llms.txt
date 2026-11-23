@@ -13,6 +13,7 @@ Linger is an independent tool. It is not affiliated with Apple, Spotify, or NetE
 - A heart button in the menu bar panel that likes the song that is playing. For Apple Music, the song is also marked as a favorite in Music.
 - Manual lyrics search and replacement, from LRCLIB and NetEase Cloud Music.
 - A local lyrics cache that also works offline for songs you have played.
+- An optional Dock icon. Clicking it opens Settings in its own window.
 - Launch at login and automatic updates.
 
 ## Players
