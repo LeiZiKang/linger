@@ -17,8 +17,12 @@ Requires macOS 14 or later, on Apple silicon or Intel. Supports NetEase Cloud Mu
 - Move and resize the widget, keep it at desktop level or on top, and lock it for click-through.
 - Per-track timing offsets, with manual lyrics search and selection.
 - Like the song that's playing with one click on the heart in the menu bar panel (also marked as a favorite in Apple Music).
-- Optional Dock icon; clicking it opens Settings in its own window.
+- Optional Dock icon; clicking it opens Settings in its own modern sidebar window.
 - Local lyrics cache, launch at login, and automatic updates.
+
+## Pricing
+
+Linger includes a full-featured 14-day free trial. After the trial, a one-time $4.99 USD license unlocks Linger permanently on up to 3 Macs (no subscription, free updates included, and a 14-day [self-service refund](https://linger-stats.lzkhaoshua.workers.dev/refund) guarantee).
 
 ## Installation
 

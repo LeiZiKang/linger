@@ -1,6 +1,6 @@
 # Linger (余音)
 
-> Linger is a free macOS app that shows synced lyrics on the desktop for the song that is playing in NetEase Cloud Music, Spotify, or Apple Music. It needs macOS 14 or later, on Apple silicon or Intel.
+> Linger is a macOS app that shows synced lyrics on the desktop for the song that is playing in NetEase Cloud Music, Spotify, or Apple Music. It includes a full-featured 14-day free trial, followed by a one-time $4.99 USD license (up to 3 Macs, no subscription). It needs macOS 14 or later, on Apple silicon or Intel.
 
 Linger is an independent tool. It is not affiliated with Apple, Spotify, or NetEase Cloud Music. It is not on the Mac App Store, because reading the playback state of NetEase Cloud Music needs capabilities that the App Store does not allow.
 
@@ -27,7 +27,7 @@ No account. With “Share anonymous usage stats” on (the default), update chec
 
 ## Price
 
-Free.
+14-day full-featured free trial, then $4.99 USD one-time purchase (activate on up to 3 Macs, free updates, 14-day refund policy via lzkhaoshua@gmail.com).
 
 ## Links
 
