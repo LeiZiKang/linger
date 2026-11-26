@@ -4,7 +4,7 @@
 
 Linger shows lyrics alongside your music on your Mac desktop.
 
-[Website](https://linger-lyrics.pages.dev/) · [Download](https://github.com/LeiZiKang/linger/releases/latest/download/Linger.dmg) · [Report an issue](https://github.com/LeiZiKang/linger/issues)
+[Website](https://linger.levicraft.app/) · [Download](https://github.com/LeiZiKang/linger/releases/latest/download/Linger.dmg) · [Report an issue](https://github.com/LeiZiKang/linger/issues)
 
 ## Requirements and players
 
@@ -22,7 +22,7 @@ Requires macOS 14 or later, on Apple silicon or Intel. Supports NetEase Cloud Mu
 
 ## Pricing
 
-Linger includes a full-featured 14-day free trial. After the trial, a one-time $4.99 USD license unlocks Linger permanently on up to 3 Macs (no subscription, free updates included, and a 14-day [self-service refund](https://linger-stats.lzkhaoshua.workers.dev/refund) guarantee).
+Linger includes a full-featured 14-day free trial. After the trial, a one-time $4.99 USD license unlocks Linger permanently on up to 3 Macs (no subscription, free updates included, and a 14-day [self-service refund](https://linger-api.levicraft.app/refund) guarantee).
 
 ## Installation
 

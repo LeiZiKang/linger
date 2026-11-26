@@ -4,7 +4,7 @@
 
 余音是一款 macOS 桌面歌词工具，让歌词随音乐显示在桌面上。
 
-[官网](https://linger-lyrics.pages.dev/) · [下载](https://github.com/LeiZiKang/linger/releases/latest/download/Linger.dmg) · [问题反馈](https://github.com/LeiZiKang/linger/issues)
+[官网](https://linger.levicraft.app/) · [下载](https://github.com/LeiZiKang/linger/releases/latest/download/Linger.dmg) · [问题反馈](https://github.com/LeiZiKang/linger/issues)
 
 ## 系统与播放器
 
@@ -22,7 +22,7 @@
 
 ## 定价
 
-余音提供 14 天全功能免费试用。试用到期后，一次性支付 $4.99 美元即可买断永久许可（最多激活 3 台 Mac，无需订阅，包含后续更新，并支持 14 天[自助退款](https://linger-stats.lzkhaoshua.workers.dev/refund)）。
+余音提供 14 天全功能免费试用。试用到期后，一次性支付 $4.99 美元即可买断永久许可（最多激活 3 台 Mac，无需订阅，包含后续更新，并支持 14 天[自助退款](https://linger-api.levicraft.app/refund)）。
 
 ## 安装
 

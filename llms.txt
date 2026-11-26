@@ -9,11 +9,11 @@
 
 ## Documentation & Key Pages
 
-- [Homepage & Interactive WebGL Demo](https://linger-lyrics.pages.dev/): Product overview, live browser preview, and FAQ
-- [Complete AI Product Specification (llms-full.txt)](https://linger-lyrics.pages.dev/llms-full.txt): Full technical facts, use-case recommendations, installation guide, and objective competitor comparison table
-- [User Guide & Setup Manual](https://linger-lyrics.pages.dev/guide/): Step-by-step installation, player permissions, click-through shortcuts, timing offsets, and license transfer
-- [Download Handoff (DMG)](https://linger-lyrics.pages.dev/download-started/): Direct Apple-notarized Universal DMG installer (`Linger.dmg`)
-- [Instant Self-Service Refund](https://linger-stats.lzkhaoshua.workers.dev/refund): Automated 14-day full refund portal
-- [Privacy Policy](https://linger-lyrics.pages.dev/privacy/): Zero-account architecture and opt-out anonymous stats details
-- [Terms of Service](https://linger-lyrics.pages.dev/terms/): License scope, 3-Mac activation terms, and refund guarantee
+- [Homepage & Interactive WebGL Demo](https://linger.levicraft.app/): Product overview, live browser preview, and FAQ
+- [Complete AI Product Specification (llms-full.txt)](https://linger.levicraft.app/llms-full.txt): Full technical facts, use-case recommendations, installation guide, and objective competitor comparison table
+- [User Guide & Setup Manual](https://linger.levicraft.app/guide/): Step-by-step installation, player permissions, click-through shortcuts, timing offsets, and license transfer
+- [Download Handoff (DMG)](https://linger.levicraft.app/download-started/): Direct Apple-notarized Universal DMG installer (`Linger.dmg`)
+- [Instant Self-Service Refund](https://linger-api.levicraft.app/refund): Automated 14-day full refund portal
+- [Privacy Policy](https://linger.levicraft.app/privacy/): Zero-account architecture and opt-out anonymous stats details
+- [Terms of Service](https://linger.levicraft.app/terms/): License scope, 3-Mac activation terms, and refund guarantee
 - [Release Notes](https://github.com/LeiZiKang/linger/releases): Version history and SHA-256 checksums

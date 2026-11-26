@@ -3,7 +3,7 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://linger-lyrics.pages.dev; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://linger.levicraft.app https://linger-lyrics.pages.dev; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'
 
 /demo/timing.html
   Content-Security-Policy: default-src 'self'; media-src 'self' blob:; connect-src 'none'; script-src 'self'; style-src 'self'; frame-ancestors 'none'; base-uri 'self'
