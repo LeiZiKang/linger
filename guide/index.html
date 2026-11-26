@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07080f">
+  <title>Linger User Guide — Setup, Sync &amp; Shortcuts on macOS</title>
+  <meta name="description" content="Step-by-step setup guide for Linger on macOS 14+: installing the DMG, connecting Spotify and Apple Music, locking click-through lyrics, adjusting timing offsets, and managing your license.">
+  <link rel="canonical" href="https://linger-lyrics.pages.dev/guide/">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/app-icon.png">
+  <link rel="alternate" type="text/markdown" href="../llms-full.txt" title="Linger complete product specification for AI agents">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../subpage.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Set Up Synced Desktop Lyrics on macOS with Linger",
+    "description": "Install Linger on macOS 14 or later, connect Apple Music or Spotify, position and lock the click-through lyrics overlay, and fine-tune per-song timing.",
+    "totalTime": "PT2M",
+    "tool": [
+      { "@type": "HowToTool", "name": "Mac running macOS 14.0 (Sonoma) or later" },
+      { "@type": "HowToTool", "name": "Apple Music, Spotify, or NetEase Cloud Music" }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Download and install Linger into Applications",
+        "text": "Download Linger.dmg, open the disk image, and drag Linger.app into your /Applications folder so macOS Launch at Login and silent background updates work seamlessly.",
+        "url": "https://linger-lyrics.pages.dev/guide/#install"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Play a song and grant optional player sync permission",
+        "text": "Open Linger from Applications (a musical note icon appears in the menu bar) and start playing a track. Approve macOS Automation access when prompted for Spotify or Apple Music to enable sub-second playback progress.",
+        "url": "https://linger-lyrics.pages.dev/guide/#players"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Position the card and enable click-through locking",
+        "text": "Drag the floating lyrics card anywhere on your screen, drag a corner to resize, choose Desktop or On Top placement, and toggle Lock Position so mouse clicks pass right through the card.",
+        "url": "https://linger-lyrics.pages.dev/guide/#ergonomics"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Adjust per-track timing or choose alternate lyrics",
+        "text": "Click the musical note in the menu bar to shift lyrics timing by ±0.5s (or Option-click for ±0.1s) or click Choose Lyrics to pick another synced version.",
+        "url": "https://linger-lyrics.pages.dev/guide/#timing"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Activate or transfer your Linger Pro license",
+        "text": "Use Linger free for 14 days. After purchasing a $4.99 one-time license, click Activate in Linger on the confirmation page or paste your key into Settings › License. Click Deactivate This Mac anytime to move a slot to a new Mac.",
+        "url": "https://linger-lyrics.pages.dev/guide/#license"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../">
+        <img src="../assets/app-icon.png" alt="" width="30" height="30">
+        <span data-lang="en">Linger</span>
+        <span data-lang="zh" hidden>余音</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="../#features"><span data-lang="en">Features</span><span data-lang="zh" hidden>特性</span></a>
+        <a href="../#playground"><span data-lang="en">Playground</span><span data-lang="zh" hidden>在线体验</span></a>
+        <a href="../#pricing"><span data-lang="en">Pricing</span><span data-lang="zh" hidden>定价</span></a>
+        <a href="./"><span data-lang="en">Guide</span><span data-lang="zh" hidden>指南</span></a>
+      </nav>
+      <div class="header-actions">
+        <button id="language" type="button" role="switch" aria-checked="false" aria-label="Switch language">
+          <span aria-hidden="true">EN</span>
+          <span aria-hidden="true">中文</span>
+        </button>
+        <a class="nav-cta" href="../download-started/"><span data-lang="en">Download</span><span data-lang="zh" hidden>免费试用</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="doc-main">
+    <div data-lang="en">
+      <div class="doc-hero">
+        <p class="version-pill">User Guide · v1.0.2</p>
+        <h1>Getting the most out of Linger.</h1>
+        <p class="doc-lead">Everything you need to set up synced desktop lyrics, customize click-through behavior, fine-tune timing, and manage your 3-Mac license.</p>
+      </div>
+
+      <section id="install" class="doc-section">
+        <h2>1. Installation &amp; First Launch</h2>
+        <ol>
+          <li>Download the Apple-notarized Universal installer from <a href="../download-started/">Download Linger</a> (supports both Apple silicon and Intel Macs on macOS 14.0 Sonoma or later).</li>
+          <li>Open <code>Linger.dmg</code> and drag <strong>Linger.app</strong> into your <strong>Applications</strong> folder. Keeping Linger inside <code>/Applications</code> is required by macOS for <em>Launch at login</em> and silent background updates.</li>
+          <li>Launch Linger from Applications. A <code>♪</code> note icon appears in your macOS menu bar, and your 14-day full-featured free trial begins automatically—no account or credit card needed.</li>
+        </ol>
+      </section>
+
+      <section id="players" class="doc-section">
+        <h2>2. Connecting Music Players</h2>
+        <ul>
+          <li><strong>Apple Music &amp; Spotify</strong>: When you play a track, macOS may ask to allow Linger to control Spotify or Music. Approving this Automation permission lets Linger read sub-second playback progress directly. You can check or grant access anytime in <code>Settings › General › Permissions</code>.</li>
+          <li><strong>NetEase Cloud Music</strong>: Works out of the box via macOS Now Playing with zero extra permissions.</li>
+          <li><strong>One-Click Favorites (<code>⌘L</code>)</strong>: Click the heart button next to the track title in the menu bar panel (or press <code>⌘L</code> while the panel is open) to like the current song. For Apple Music tracks, Linger also marks the song as a Favorite directly in the Music app.</li>
+        </ul>
+      </section>
+
+      <section id="ergonomics" class="doc-section">
+        <h2>3. Window Placement, Click-Through &amp; Visuals</h2>
+        <ul>
+          <li><strong>Move &amp; Resize</strong>: Drag the floating lyrics card anywhere across single or multi-display setups, and drag any corner to resize. Click <code>Reset Position and Size</code> in <code>Settings › Appearance</code> to return to default coordinates.</li>
+          <li><strong>Desktop vs. On Top</strong>: Choose <strong>Desktop</strong> to pin lyrics peacefully above your wallpaper and behind active windows, or <strong>On Top</strong> to keep lyrics visible above full-window apps.</li>
+          <li><strong>Lock Position (Click-Through)</strong>: Enable <strong>Lock position</strong> in the menu bar panel or Settings so mouse clicks pass completely through the card to underlying windows, paired with <strong>Fade on hover</strong> when your pointer approaches.</li>
+          <li><strong>XDR HDR &amp; Aurora Intensity</strong>: On XDR MacBook Pro or Pro Display XDR screens, toggle <code>Highlight current line in HDR</code> and choose between <em>Soft</em>, <em>Standard</em>, or <em>Vivid</em> aurora shaders.</li>
+        </ul>
+      </section>
+
+      <section id="timing" class="doc-section">
+        <h2>4. Timing Offsets, Alternate Lyrics &amp; Offline Cache</h2>
+        <ul>
+          <li><strong>Per-Song Timing Offset</strong>: In the menu bar panel, click <code>−</code> or <code>+</code> beside <em>Lyrics timing</em> to shift lyrics by <code>±0.5s</code>, or hold <code>Option</code> while clicking for fine <code>±0.1s</code> adjustments. Linger remembers your offset automatically for that specific song.</li>
+          <li><strong>Manual Lyrics Search</strong>: Click <strong>Choose Lyrics</strong> in the menu bar panel to search alternate synced or translated versions from LRCLIB and NetEase Cloud Music and preview lines before applying.</li>
+          <li><strong>Offline Cache</strong>: Synced lyrics, word timings, and album palettes are cached locally (up to 50 MB) so replayed tracks work offline. Clear the cache anytime in <code>Settings › Lyrics › Storage</code> without losing saved timing offsets.</li>
+        </ul>
+      </section>
+
+      <section id="shortcuts" class="doc-section">
+        <h2>5. Keyboard Shortcuts &amp; Silent Updates</h2>
+        <div class="doc-table-wrap">
+          <table class="doc-table">
+            <thead>
+              <tr><th>Action</th><th>Shortcut / Gesture</th><th>Where</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Open Settings</td><td><code>⌘,</code></td><td>Menu bar panel or when Dock icon is active</td></tr>
+              <tr><td>Like / Unlike current song</td><td><code>⌘L</code></td><td>Menu bar panel</td></tr>
+              <tr><td>Fine-tune timing by ±0.1s</td><td><code>Option</code> + Click <code>−</code> / <code>+</code></td><td>Menu bar panel › Lyrics timing</td></tr>
+              <tr><td>Quit Linger</td><td><code>⌘Q</code></td><td>Menu bar panel or active app menu</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Silent Updates &amp; What’s New</strong>: By default, Linger downloads and verifies Ed25519-signed updates silently in the background without pop-up interruptions, applying them when idle or on quit. Open <code>Settings</code> anytime to browse the categorized <strong>What’s new</strong> changelog or toggle <code>Automatic updates</code> off.</p>
+      </section>
+
+      <section id="license" class="doc-section">
+        <h2>6. License Activation, Moving Macs &amp; Self-Service Refunds</h2>
+        <ul>
+          <li><strong>One-Click Activation</strong>: After purchasing Linger Pro ($4.99 USD one-time) via <a href="https://linger-stats.lzkhaoshua.workers.dev/buy">Stripe Checkout</a>, click <strong>Activate in Linger</strong> on the confirmation screen, or paste your <code>LINGER-XXXX-XXXX-XXXX</code> key in <code>Settings › License</code>.</li>
+          <li><strong>Up to 3 Macs</strong>: One license activates up to 3 Macs simultaneously. Moving to a new Mac? Open <code>Settings › License</code> on an old Mac and click <strong>Deactivate This Mac</strong> to free the slot immediately.</li>
+          <li><strong>14-Day Instant Refund</strong>: Within 14 days of purchase, visit the <a href="https://linger-stats.lzkhaoshua.workers.dev/refund">Self-Service Refund portal</a>, enter your license key and purchase email, and Stripe processes a full refund automatically. Need help? Email <a href="mailto:support@levicraft.app">support@levicraft.app</a>.</li>
+        </ul>
+      </section>
+    </div>
+
+    <div data-lang="zh" hidden>
+      <div class="doc-hero">
+        <p class="version-pill">使用指南 · v1.0.2</p>
+        <h1>余音 Linger 使用指南</h1>
+        <p class="doc-lead">从安装授权、点击穿透布局、逐字时间轴微调到激活码迁移，两分钟掌握全部细节。</p>
+      </div>
+
+      <section class="doc-section">
+        <h2>1. 安装与首次启动</h2>
+        <ol>
+          <li>前往 <a href="../download-started/">下载页面</a> 获取经过 Apple 官方公证的双架构安装包（原生支持 Apple 芯片与 Intel Mac，需 macOS 14.0 及以上）。</li>
+          <li>打开 <code>Linger.dmg</code>，将 <strong>Linger.app</strong> 拖入 <strong>应用程序（Applications）</strong> 文件夹（开机自启与后台静默更新均要求应用位于该目录）。</li>
+          <li>从“应用程序”启动余音，屏幕右上角菜单栏会出现 <code>♪</code> 图标，自动开启 14 天全功能免费试用（无需注册账号或绑卡）。</li>
+        </ol>
+      </section>
+
+      <section class="doc-section">
+        <h2>2. 连接音乐播放器</h2>
+        <ul>
+          <li><strong>Apple Music 与 Spotify</strong>：首次播放时系统可能提示允许余音读取对应播放器，点击允许即可获得毫秒级进度同步（也可随时在「设置 › 通用 › 权限」中查看与开启）。</li>
+          <li><strong>网易云音乐</strong>：开箱即用，无需额外系统权限。</li>
+          <li><strong>一键红心喜欢（<code>⌘L</code>）</strong>：点击菜单栏面板歌名旁的爱心（或按 <code>⌘L</code>）即可标记当前歌曲；播放 Apple Music 时还会同步标记为系统“音乐”App 中的喜爱歌曲。</li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2>3. 窗口层级、点击穿透与视觉调节</h2>
+        <ul>
+          <li><strong>自由拖拽与缩放</strong>：直接拖动悬浮歌词卡片换位置，拖四角调尺寸；在「设置 › 外观」点“重置位置和大小”可一键归位。</li>
+          <li><strong>桌面层 vs 最前</strong>：选择<strong>桌面</strong>可让歌词安静贴在壁纸上方、所有工作窗口下方；选择<strong>最前</strong>则始终置顶悬浮。</li>
+          <li><strong>锁定点击穿透</strong>：开启<strong>锁定位置</strong>后，鼠标点击会完全穿透悬浮窗直达底层软件，搭配<strong>鼠标悬停时变淡</strong>互不遮挡视线。</li>
+          <li><strong>XDR HDR 与流光强度</strong>：在支持 XDR 的屏幕上可开启“HDR 高亮当前句”，并在柔和 / 标准 / 华丽三档流光强度间切换。</li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2>4. 单曲时间偏移、手动换词与离线缓存</h2>
+        <ul>
+          <li><strong>单曲时间偏移</strong>：在菜单栏面板“歌词时间”旁点按 <code>−</code> / <code>+</code> 可按 <code>±0.5 秒</code> 调节，按住 <code>Option</code> 点击可按 <code>±0.1 秒</code> 精细微调，每首歌自动独立记忆。</li>
+          <li><strong>手动搜索换词</strong>：点击菜单栏面板的<strong>换歌词</strong>，可同时搜索 LRCLIB 与网易云音乐的候选歌词并实时预览切换。</li>
+          <li><strong>离线缓存</strong>：听过的歌词与封面色板自动缓存在本地（上限 50 MB），断网也能照常显示；可在「设置 › 歌词 › 存储」一键清理缓存（不影响已保存的单曲偏移）。</li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2>5. 静默自动更新与许可管理</h2>
+        <ul>
+          <li><strong>无打扰静默更新</strong>：默认开启后台静默更新，自动下载并校验签名，在未播放空闲时或退出应用时无感完成替换；更新后可在设置左下角<strong>新版本动态（What’s new）</strong>查看分类更新日志，也可在「设置 › 通用」随时关闭自动更新。</li>
+          <li><strong>激活与换机迁移</strong>：在 <a href="https://linger-stats.lzkhaoshua.workers.dev/buy">Stripe 结账页</a> 一次性支付 $4.99 美元后，点击页面上的“一键激活”按钮或在「设置 › 许可」粘贴激活码即可（最多同时激活 3 台 Mac，旧机点“在此 Mac 上停用”即可立即释放名额）。</li>
+          <li><strong>14 天自助全额退款</strong>：购买 14 天内可随时访问 <a href="https://linger-stats.lzkhaoshua.workers.dev/refund">自助退款页面</a> 输入激活码与购买邮箱，系统将通过 Stripe 即时全额原路退回。售后联系邮箱：<a href="mailto:support@levicraft.app">support@levicraft.app</a>。</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="content-width">
+    <div class="footer-row">
+      <span>© 2026 Linger</span>
+      <div class="footer-links">
+        <a href="../">Home</a>
+        <a href="./">Guide</a>
+        <a href="../privacy/">Privacy</a>
+        <a href="../terms/">Terms</a>
+        <a href="https://linger-stats.lzkhaoshua.workers.dev/refund">Self-Service Refund</a>
+        <a href="https://github.com/LeiZiKang/linger/issues">Support</a>
+        <a href="../llms-full.txt">llms-full.txt</a>
+      </div>
+    </div>
+    <p class="legal">Linger is an independently developed macOS app and is not affiliated with Apple, Spotify, or NetEase Cloud Music.</p>
+  </footer>
+</body>
+</html>

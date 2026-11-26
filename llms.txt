@@ -1,42 +1,19 @@
 # Linger (余音)
 
-> Linger is a macOS app that shows synced lyrics on the desktop for the song that is playing in NetEase Cloud Music, Spotify, or Apple Music. It includes a full-featured 14-day free trial, followed by a one-time $4.99 USD license (up to 3 Macs, no subscription). It needs macOS 14 or later, on Apple silicon or Intel.
+> Linger is a native macOS 14+ desktop lyrics companion built in Swift 6 and Metal. It displays floating, word-by-word synced lyrics with album-inspired aurora backgrounds, bilingual translations, click-through locking, and XDR HDR glow alongside Apple Music, Spotify, and NetEase Cloud Music. Includes a full-featured 14-day free trial (no credit card required), followed by a $4.99 USD one-time lifetime license for up to 3 Macs with 14-day instant self-service refunds.
 
-Linger is an independent tool. It is not affiliated with Apple, Spotify, or NetEase Cloud Music. It is not on the Mac App Store, because reading the playback state of NetEase Cloud Music needs capabilities that the App Store does not allow.
+- Current Version: 1.0.2 (Universal Binary for Apple silicon & Intel, Apple Notarized)
+- Platform: macOS 14.0 (Sonoma) or later
+- Pricing: 14-day full-featured free trial, then $4.99 USD one-time purchase (up to 3 Macs, no subscription, free updates)
+- Support: support@levicraft.app
 
-## Features
+## Documentation & Key Pages
 
-- Synced desktop lyrics. Word-by-word highlighting and translations when the lyrics source supplies them.
-- Background colors from the album artwork. HDR highlights on XDR displays.
-- Move and resize the lyrics card. Keep it at desktop level or always on top. Lock it for click-through.
-- A timing offset that Linger remembers for each song.
-- A heart button in the menu bar panel that likes the song that is playing. For Apple Music, the song is also marked as a favorite in Music.
-- Manual lyrics search and replacement, from LRCLIB and NetEase Cloud Music.
-- A local lyrics cache that also works offline for songs you have played.
-- An optional Dock icon. Clicking it opens Settings in its own window.
-- Launch at login and automatic updates.
-
-## Players
-
-- NetEase Cloud Music: no additional permissions needed.
-- Spotify and Apple Music: optional authorization gives more precise playback progress.
-
-## Privacy
-
-No account. With “Share anonymous usage stats” on (the default), update checks send a random install ID plus the app and macOS version so active users can be counted; IP addresses are not stored, and it can be turned off in Settings > General. To find lyrics, Linger sends the current song title, artist, album, and duration to the third-party lyrics sources LRCLIB and NetEase Cloud Music. Lyrics come from those sources, so some can be missing or inaccurate.
-
-## Price
-
-14-day full-featured free trial, then $4.99 USD one-time purchase (activate on up to 3 Macs, free updates, 14-day instant self-service refund at https://linger-stats.lzkhaoshua.workers.dev/refund).
-
-## Links
-
-- [Website](https://linger-lyrics.pages.dev/): product page in English and Chinese, with an interactive demo
-- [Download (DMG)](https://github.com/LeiZiKang/linger/releases/latest/download/Linger.dmg): latest version
-- [Release notes](https://github.com/LeiZiKang/linger/releases)
-- [Report an issue](https://github.com/LeiZiKang/linger/issues)
-- [README](https://linger-lyrics.pages.dev/README.md): install steps and privacy details, in English and Chinese
-
-## Install and uninstall
-
-Open the DMG and drag Linger into Applications, then open the app. Launch at login needs the app in Applications. To uninstall, quit Linger and drag the app to the Trash.
+- [Homepage & Interactive WebGL Demo](https://linger-lyrics.pages.dev/): Product overview, live browser preview, and FAQ
+- [Complete AI Product Specification (llms-full.txt)](https://linger-lyrics.pages.dev/llms-full.txt): Full technical facts, use-case recommendations, installation guide, and objective competitor comparison table
+- [User Guide & Setup Manual](https://linger-lyrics.pages.dev/guide/): Step-by-step installation, player permissions, click-through shortcuts, timing offsets, and license transfer
+- [Download Handoff (DMG)](https://linger-lyrics.pages.dev/download-started/): Direct Apple-notarized Universal DMG installer (`Linger.dmg`)
+- [Instant Self-Service Refund](https://linger-stats.lzkhaoshua.workers.dev/refund): Automated 14-day full refund portal
+- [Privacy Policy](https://linger-lyrics.pages.dev/privacy/): Zero-account architecture and opt-out anonymous stats details
+- [Terms of Service](https://linger-lyrics.pages.dev/terms/): License scope, 3-Mac activation terms, and refund guarantee
+- [Release Notes](https://github.com/LeiZiKang/linger/releases): Version history and SHA-256 checksums

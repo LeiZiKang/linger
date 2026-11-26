@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07080f">
+  <title>Privacy Policy — Linger for macOS</title>
+  <meta name="description" content="Privacy Policy for Linger: zero user accounts, local lyrics caching, opt-out anonymous update stats, and Stripe payment processing.">
+  <link rel="canonical" href="https://linger-lyrics.pages.dev/privacy/">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../subpage.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../">
+        <img src="../assets/app-icon.png" alt="" width="30" height="30">
+        <span data-lang="en">Linger</span>
+        <span data-lang="zh" hidden>余音</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="../#features"><span data-lang="en">Features</span><span data-lang="zh" hidden>特性</span></a>
+        <a href="../#pricing"><span data-lang="en">Pricing</span><span data-lang="zh" hidden>定价</span></a>
+        <a href="../guide/"><span data-lang="en">Guide</span><span data-lang="zh" hidden>指南</span></a>
+      </nav>
+      <div class="header-actions">
+        <button id="language" type="button" role="switch" aria-checked="false" aria-label="Switch language">
+          <span aria-hidden="true">EN</span>
+          <span aria-hidden="true">中文</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="doc-main">
+    <div data-lang="en">
+      <div class="doc-hero">
+        <h1>Privacy Policy</h1>
+        <p class="doc-lead">Linger is designed to stay out of your personal data: no user accounts, no cloud music login, and zero ad tracking.</p>
+        <p class="doc-meta">Effective Date: November 26, 2026 · Contact: <a href="mailto:support@levicraft.app">support@levicraft.app</a></p>
+      </div>
+
+      <section class="doc-section">
+        <h2>1. No Account &amp; Local Playback Reading</h2>
+        <p>Linger runs locally on your Mac. To synchronize lyrics, Linger reads the currently playing song title, artist, album, artwork, and playback position from your local music player (such as Apple Music, Spotify, or NetEase Cloud Music). Your listening history is never uploaded to Linger’s servers.</p>
+      </section>
+
+      <section class="doc-section">
+        <h2>2. Third-Party Lyrics Lookups</h2>
+        <p>When a song plays and isn’t already in your Mac’s local cache, your Mac sends the song’s title, artist, album, and duration directly over HTTPS to third-party lyrics providers (<strong>LRCLIB</strong> and <strong>NetEase Cloud Music</strong>) to retrieve synced lyrics and album artwork. Matched lyrics are cached locally on your Mac and can be cleared anytime in <code>Settings › Lyrics › Storage</code>.</p>
+      </section>
+
+      <section class="doc-section">
+        <h2>3. Optional Anonymous Update Statistics</h2>
+        <p>By default, <strong>Share anonymous usage stats</strong> is enabled in <code>Settings › General</code>. When Linger checks for software updates, it includes a randomly generated UUID, app version, build number, and macOS major/minor version so we can count active installations. We do <strong>not</strong> log or store IP addresses, Apple IDs, or hardware serial numbers for analytics, and records older than 35 days are automatically pruned. Turning this toggle off in Settings stops sending the random ID and deletes it from your Mac.</p>
+      </section>
+
+      <section class="doc-section">
+        <h2>4. Payments &amp; License Activation</h2>
+        <p>Purchases of Linger Pro are processed by <strong>Stripe</strong>. Linger never sees or stores your credit card number or Apple Pay credentials. To deliver your license key, verify up to 3 Mac activations, and support 14-day self-service refunds, our Cloudflare Worker stores:</p>
+        <ul>
+          <li>Your license key, Stripe Checkout session/payment ID, and purchase email address (used solely for license delivery, customer support, and verifying self-service refund requests; masked in API responses).</li>
+          <li>A random per-installation machine identifier (stored in your local macOS Keychain) for counting active Mac slots.</li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2>5. Website &amp; Cookies</h2>
+        <p>Our website (<code>linger-lyrics.pages.dev</code>) uses zero advertising trackers or third-party analytics cookies. Only your language preference (<code>linger-language</code>) is saved locally in browser <code>localStorage</code> if you switch languages.</p>
+      </section>
+
+      <section class="doc-section">
+        <h2>6. Data Deletion &amp; Contact</h2>
+        <p>For any privacy questions or to request deletion of license records associated with your email, contact <a href="mailto:support@levicraft.app">support@levicraft.app</a>.</p>
+      </section>
+    </div>
+
+    <div data-lang="zh" hidden>
+      <div class="doc-hero">
+        <h1>隐私政策</h1>
+        <p class="doc-lead">余音 Linger 坚持最小数据原则：无需注册账号、不索取音乐平台登录凭据、不含任何广告追踪。</p>
+        <p class="doc-meta">生效日期：2026 年 11 月 26 日 · 联系邮箱：<a href="mailto:support@levicraft.app">support@levicraft.app</a></p>
+      </div>
+
+      <section class="doc-section">
+        <h2>1. 本地播放状态读取</h2>
+        <p>余音在你的 Mac 本地运行，仅读取当前正在播放歌曲的歌名、歌手、专辑、封面及播放时间进度用于同步显示歌词，不会向我们的服务器上传你的听歌历史记录。</p>
+      </section>
+
+      <section class="doc-section">
+        <h2>2. 第三方歌词查询与本地缓存</h2>
+        <p>当本地缓存未命中时，你的 Mac 会直接通过 HTTPS 向第三方公开歌词源（<strong>LRCLIB</strong> 与 <strong>网易云音乐</strong>）发送当前歌曲的歌名、歌手、专辑与时长以获取同步歌词。结果缓存在你的 Mac 本地磁盘，可随时在「设置 › 歌词 › 存储」中一键清除。</p>
+      </section>
+
+      <section class="doc-section">
+        <h2>3. 可选的匿名更新统计</h2>
+        <p>「共享匿名使用统计」默认开启（位于「设置 › 通用」）。开启时，检查更新请求会附带一个随机生成的 UUID 及 App / macOS 版本号，仅用于统计活跃安装量，<strong>不记录或存储 IP 地址</strong>，且超过 35 天的统计行会自动清理。你在设置中关闭该开关后，本地随机 ID 会立即删除。</p>
+      </section>
+
+      <section class="doc-section">
+        <h2>4. 支付与许可证激活数据</h2>
+        <p>Linger Pro 付款由 <strong>Stripe</strong> 安全处理，我们不接触也不存储任何银行卡号或 Apple Pay 凭据。为发放激活码、管理最多 3 台 Mac 的设备名额以及支持 14 天自助退款，服务端仅保存激活码、Stripe 订单标识、购买邮箱（接口返回均做脱敏处理）及随机生成的本机安装标识。</p>
+      </section>
+
+      <section class="doc-section">
+        <h2>5. 联系方式</h2>
+        <p>如有任何隐私疑问或数据删除请求，请发送邮件至 <a href="mailto:support@levicraft.app">support@levicraft.app</a>。</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="content-width">
+    <div class="footer-row">
+      <span>© 2026 Linger</span>
+      <div class="footer-links">
+        <a href="../">Home</a>
+        <a href="../guide/">Guide</a>
+        <a href="./">Privacy</a>
+        <a href="../terms/">Terms</a>
+        <a href="https://linger-stats.lzkhaoshua.workers.dev/refund">Self-Service Refund</a>
+        <a href="https://github.com/LeiZiKang/linger/issues">Support</a>
+        <a href="../llms-full.txt">llms-full.txt</a>
+      </div>
+    </div>
+    <p class="legal">Linger is an independently developed macOS app and is not affiliated with Apple, Spotify, or NetEase Cloud Music.</p>
+  </footer>
+</body>
+</html>

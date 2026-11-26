@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://linger-lyrics.pages.dev/</loc></url>
+  <url><loc>https://linger-lyrics.pages.dev/guide/</loc></url>
+  <url><loc>https://linger-lyrics.pages.dev/download-started/</loc></url>
+  <url><loc>https://linger-lyrics.pages.dev/privacy/</loc></url>
+  <url><loc>https://linger-lyrics.pages.dev/terms/</loc></url>
+  <url><loc>https://linger-lyrics.pages.dev/llms.txt</loc></url>
+  <url><loc>https://linger-lyrics.pages.dev/llms-full.txt</loc></url>
 </urlset>
